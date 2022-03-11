@@ -1,0 +1,22 @@
+/*===== Start Footer Section =====*/
+
+.footer-container{
+    padding: var(--section-spacing);
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+        text-align: center;
+        display: block;
+        padding: 2rem 9%;
+
+        p{
+            padding: .5rem 0;
+        }
+    }
+    @media screen and (max-width: 768px){
+        font-size: var(--sm-font);
+    }
+}
+
+/*===== End Footer Section =====*/

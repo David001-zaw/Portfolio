@@ -1,0 +1,183 @@
+
+
+/*===== Start Header Container =====*/
+
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    @media screen and (max-width: 1024px){
+        position: fixed;
+        background-color: rgba(47, 47, 47, .8);
+    }
+
+    .nav{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--header-spacing);
+        height: calc(var(--header-height) + 2rem);
+        position: relative;
+
+        @media screen and (max-width: 1024px){
+            height: var(--header-height);
+        }
+
+        &__logo{
+            a{
+                font-size: 3rem;
+                font-family: var(--title-font);
+                font-weight: var(--normal-font-weight);
+                color: transparent;
+                -webkit-text-stroke: 1px var(--clr-accent);
+
+                @media screen and (max-width: 1024px){
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        &__menu{
+
+            @media screen and (max-width: 1024px){
+                position: fixed;
+                top: var(--header-height);
+                right: 100%;
+                width: 100%;
+                height: 100%;
+                padding: 2rem;
+                transition: .5s;
+                backdrop-filter: blur(10px);
+
+                &.active{
+                    right: 0;
+                }
+
+            }
+        }
+
+        &__list{
+            display: flex;
+
+            @media screen and (max-width: 1024px){
+                display: block;
+            }
+        }
+
+        &__item{
+            margin: 1rem;
+        }
+
+        &__link{
+            position: relative;
+            font-weight: 500;
+            color: var(--clr-font);
+            display: inline-block;
+            overflow: hidden;
+            background: linear-gradient(to right, var(--clr-accent), var(--clr-accent) 50%, var(--clr-font) 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            background-position: 100%;
+            transition: all 275ms ease-in;
+
+            &:hover {
+                background-position: 0 100%;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: var(--clr-accent);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 275ms ease-in;
+            }
+            &:hover::after{
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+
+        &__toggle{
+            width: 1.5rem;
+            height: 2rem;
+            border: none;
+            outline: none;
+            background: none;
+            display: none;
+
+            @media screen and (max-width: 1024px){
+                display: block;
+            }
+
+            span {
+                position: relative;
+                top: 0;
+                display: block;
+                width: 100%;
+                height: 2px;
+                margin-bottom: 5px;
+                transition: all 0.25s ease;
+                border-radius: 15px;
+                background: var(--clr-font);
+
+                &:nth-child(2) {
+                    right: 0;
+                    width: 80%;
+                    opacity: 1;
+                }
+
+                &:nth-child(3) {
+                    width: 60%;
+                }
+            }
+
+        }
+
+    }
+
+
+    &.active {
+
+        .nav__toggle{
+
+            span{
+
+                &:nth-child(1) {
+                    top: 8px;
+                    left: -4px;
+                    -ms-transform: rotate(38deg);
+                    transform: rotateZ(38deg);
+                }
+
+                &:nth-child(2) {
+                    right: -100%;
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    top: -6px;
+                    left: -4px;
+                    width: 100%;
+                    -ms-transform: rotate(-38deg);
+                    transform: rotateZ(-38deg);
+                }
+
+            }
+
+        }
+    }
+
+}
+
+
+/*===== End Header Container =====*/

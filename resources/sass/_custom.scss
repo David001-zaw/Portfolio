@@ -1,0 +1,105 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Playfair+Display:wght@400;500&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/*===== Custom Properties =====*/
+:root{
+    --clr-font: #ffffff;
+    --clr-dark-black: #2A2A2A;
+    --clr-light-black: #2F2F2F;
+    // --clr-accent: #B56B2C;
+    // --clr-accent: #DE8774;
+    // --clr-accent: #5F4B5C;
+    --clr-accent: #00C896;
+
+    --font-poppins: 'Poppins', sans-serif;
+    --title-font: 'Playfair Display', serif;
+    --body-font: 'Josefin Sans', sans-serif;
+
+    --header-spacing: 0 9%;
+    --header-height: 4rem;
+
+    --section-spacing: 3rem 9%;
+
+    --line-height: 1.3;
+
+    --light-font-weight: 300;
+    --normal-font-weight: 500;
+    --bold-font-weight: 700;
+
+}
+
+
+/*===== Base Styles =====*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: var(--body-font);
+    color: var(--clr-font);
+    background-color: var(--clr-dark-black);
+
+}
+section{
+    padding: var(--section-spacing);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+hr{
+    opacity: .2;
+}
+
+::-moz-selection {
+    color: var(--clr-accent);
+}
+
+::selection {
+    color: var(--clr-accent);
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    :root{
+
+        --section-spacing: 4rem 9%;
+
+    }
+
+}
+
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap:1.5rem;
+}
+
+.no-items{
+    text-align: center;
+
+    h1{
+        font-weight: 300;
+        font-size: var(--lg-font);
+    }
+}
+

@@ -1,0 +1,123 @@
+/*===== Start Projects Section =====*/
+
+.projects{
+
+    .projects__intro{
+        h1{
+            font-family: var(--title-font);
+        }
+
+        span{
+            float: right;
+            text-decoration: underline wavy var(--clr-accent);
+        }
+    }
+
+    &__container{
+        position: relative;
+
+        .projects__bgText{
+            position: absolute;
+            top: -80px;left: 0;
+            z-index: -1;
+            line-height: 10rem;
+            height: 110%;
+            font-family: var(--title-font);
+
+            @media screen and (max-width: 1028px){
+                display: none;
+            }
+
+            span{
+                font-size: 30rem;
+                letter-spacing: 3rem;
+                color: transparent;
+                -webkit-text-stroke: 1px rgba(0, 0, 0, .2);
+            }
+
+        }
+
+        .project-item{
+            margin-bottom: 50px;
+
+            &:nth-child(odd){
+                .project_content{
+                    flex-direction: row-reverse;
+                }
+
+                .action-btns{
+                    text-align: left;
+                }
+            }
+
+            .action-btns{
+                text-align: right;
+                border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+                form{
+                    display: inline;
+                }
+            }
+
+            .project_content{
+                padding: 2em 0;
+                display: flex;
+                gap: 5rem;
+
+                @media screen and (max-width: 768px) {
+                    display: block;
+                }
+
+                & > div{
+                    flex: 1 1;
+                }
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+
+                    @media screen and (max-width: 768px) {
+                        margin-bottom: 3rem;
+                    }
+                }
+
+                .project{
+
+                    &__main-title{
+                        font-size: var(--lg-font);
+                        font-weight: 300;
+                        width: 100%;
+                        border-bottom: 1px solid var(--clr-font);
+                        padding-bottom: .8rem;
+                        margin-bottom: 2rem;
+                    }
+
+                    &__sub-title{
+                        font-size: 1.5rem;
+                        padding-bottom: .8rem;
+                        font-weight: 300;
+                    }
+
+                    &__name{
+                        color: var(--clr-accent);
+                        font-weight: 500;
+                        display: inline-block;
+                        padding-bottom: .3rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    &__overview{
+                        line-height: var(--line-height);
+                    }
+
+                    &__skills > p {
+                        line-height: var(--line-height);
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+/*===== End Projects Section =====*/

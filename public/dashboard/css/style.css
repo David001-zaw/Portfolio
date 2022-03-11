@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(10 7 14);
+    color: #fff;
+}
+a{
+    display: inline-block;
+}
+a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-title{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 auto;
+
+    border-bottom: 1px solid #fff;
+    width: max-content;
+}
+
+.logo a{
+    font-size: 3rem;
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke: 1px #00C896;
+}
+
+.header{
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.header .username{
+    color: #00C896;
+}
+
+.go-to-back{
+    margin: 20px 0 50px;
+}
+.go-to-back .line-btn::after{
+    height: 1px;
+}
+
+/* Main Button */
+.main-btn {
+    outline: none;
+    display: inline-block;
+    position: relative;
+    background: #00C896;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background .5s ease;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.main-btn:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background: white;
+    bottom: -25px;
+    left: 0;
+    border: 2px solid white;
+    transform: translateX(-50px) rotate(45deg);
+    transition: transform .5s ease;
+}
+.main-btn:hover {
+    background: transparent;
+    border-color: white;
+    color: #fff;
+}
+.main-btn:hover:before {
+    transform: translateX(250px) rotate(45deg);
+}
+
+
+/* Line Button */
+
+.line-btn{
+    position: relative;
+    color: #00C896;
+    font-weight: 400;
+    text-decoration: none;
+}
+.line-btn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #00C896;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+.line-btn:hover{
+    color: #00C896;
+}
+.line-btn:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.js-tilt-glare {
+    border-radius: 18px;
+}
+
+.d-none{
+    display: none;
+}
+
+@media screen and (max-width: 468px){
+    .header{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .container{
+        padding: 10px;
+    }
+}

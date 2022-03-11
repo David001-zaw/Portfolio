@@ -1,0 +1,50 @@
+/* Scroll Top Btn */
+
+.scroll-top-btn{
+    position: fixed;
+    bottom: -100%;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: var(--clr-accent);
+    color: var(--clr-font);
+    z-index: 9999;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    animation: scrollUp 2s linear infinite;
+
+    i{
+        color: var(--clr-dark-black);
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    &.show{
+        bottom: 3rem;
+        pointer-events: auto;
+    }
+
+    &:hover{
+        border: 1px solid var(--clr-font);
+    }
+
+
+}
+@keyframes scrollUp{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

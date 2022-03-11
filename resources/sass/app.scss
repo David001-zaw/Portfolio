@@ -1,0 +1,33 @@
+
+@use "custom";
+
+// IMPORT THE COMPONENTS
+
+@use "components/button";
+@use "components/circles";
+@use "components/github-icon";
+@use "components/loading";
+@use "components/quick-links";
+@use "components/scroll-top";
+@use "components/typography";
+
+
+// IMPORT THE SECTIONS
+
+@use "sections/about";
+@use "sections/blogs";
+@use "sections/contact";
+@use "sections/footer";
+@use "sections/header";
+@use "sections/home";
+@use "sections/projects";
+@use "sections/skills";
+
+
+
+// IMPORT BLOG STYLES
+
+@use "blog/blogDetail";
+@use "blog/blogPage";
+
+
