@@ -28,7 +28,7 @@
                             <label for="name" class="form-label">Category Name</label>
                             <input type="text" name="name" id="name" class="form-control">
                             <div id="passwordHelpBlock" class="form-text">
-                            Category name must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                            Category name must be 8-20 characters long and must not contain special characters, or emoji.
                             </div>
                         </div>
 

@@ -52,7 +52,7 @@ class BlogController extends Controller
 
     public function edit(Blog $blog)
     {
-        if(auth()->user()->id !== $blog->user->id){
+        if(auth()->user()->id !== $blog->author->id){
             abort(403);
         }
 
@@ -62,7 +62,7 @@ class BlogController extends Controller
 
     public function update(Request $request, Blog $blog)
     {
-        if(auth()->user()->id !== $blog->user->id){
+        if(auth()->user()->id !== $blog->author->id){
             abort(403);
         }
 
@@ -83,7 +83,7 @@ class BlogController extends Controller
 
     public function destroy(Blog $blog)
     {
-        if(auth()->user()->id !== $blog->user->id){
+        if(auth()->user()->id !== $blog->author->id){
             abort(403);
         }
 
