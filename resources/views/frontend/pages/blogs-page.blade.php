@@ -20,7 +20,7 @@
 
     <div class="banner">
         <div class="banner-title">
-            <h1><span>Art.</span> Coder Blog</h1>
+            <h1><span>Zaw.</span> Coder Blog</h1>
         </div>
         <p>နည်းပညာနဲ့ ပတ်သက်ပြီး သိချင်တဲ့အကြောင်းအရာကို အောက်မှာရှိတဲ့ search box မှာ ရိုက်ထည့်ပြီး ရှာဖွေလို့ရပါတယ်။ အကယ်၍ သင်ရိုက်ရှာတဲ့ အကြောင်းအရာကို မတွေ့ပါက message box ကနေ သိချင်တဲ့အကြောင်းအရာကို request ထားလို့ရပါတယ်ဗျ။</p>
         <form action="" autocomplete="off">
